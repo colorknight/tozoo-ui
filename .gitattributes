@@ -1,0 +1,2 @@
+# Repository text files: normalize to LF on commit/checkout.
+* text=auto eol=lf

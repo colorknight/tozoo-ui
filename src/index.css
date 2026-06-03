@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  /* 不用 @apply bg-admin-bg：部分 PostCSS/Tailwind 组合对多段连字符色名解析会失败 */
+  @apply min-h-screen text-slate-800 antialiased;
+  background-color: #f1f5f9;
+}
+
+/* Markdown 预览通用排版（参考 agent-client 的 markdown-preview） */
+.markdown-preview {
+  line-height: 1.75;
+  color: #1f2937;
+  font-size: 14px;
+}
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3 {
+  margin: 0.9em 0 0.45em;
+  font-weight: 650;
+  color: #111827;
+}
+.markdown-preview p {
+  margin: 0.55em 0;
+}
+.markdown-preview pre {
+  background: #0b1220;
+  color: #e5e7eb;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 12px 14px;
+  overflow-x: auto;
+}
+.markdown-preview code {
+  background: rgba(15, 23, 42, 0.06);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+.markdown-preview pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+.markdown-preview blockquote {
+  margin: 0.55em 0;
+  padding-left: 1em;
+  border-left: 4px solid #e5e7eb;
+  color: #4b5563;
+}
+.markdown-preview a {
+  color: #0f766e;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.markdown-preview a:hover {
+  color: #115e59;
+}
+.markdown-preview ul,
+.markdown-preview ol {
+  margin: 0.55em 0;
+  padding-left: 1.5em;
+}
+
+/* GFM 表格样式 */
+.markdown-preview table {
+  width: 100%;
+  margin: 10px 0 14px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.markdown-preview th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 650;
+}

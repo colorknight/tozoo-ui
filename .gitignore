@@ -1,0 +1,49 @@
+# --- 依赖 ---
+node_modules/
+
+# --- 构建产物 ---
+dist/
+build/
+out/
+
+# --- 环境变量 ---
+.env
+.env.local
+.env.*.local
+
+# --- 日志 ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- 缓存 ---
+.cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# --- 包管理器 ---
+.pnpm-store/
+
+# --- 测试 ---
+coverage/
+.nyc_output/
+
+# --- 临时文件 ---
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- IDE ---
+.vscode/
+
+# .idea 中仅忽略个人配置，保留共享配置
+.idea/shelf/
+.idea/workspace.xml
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/queries/
